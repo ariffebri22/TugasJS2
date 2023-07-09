@@ -2,7 +2,7 @@ const names = ["Abigail", "Alexandra", "Alison", "Amanda", "Angela", "Bella", "C
 
 function searchName(keyword, limit, callback) {
     const results = names
-        .filter(function (name) {
+        .filter((name) => {
             return name.toLowerCase().includes(keyword.toLowerCase());
         })
         .slice(0, limit);
@@ -10,7 +10,7 @@ function searchName(keyword, limit, callback) {
     if (results.length > 0) {
         callback(results);
     } else {
-        callback("Names not found");
+        callback("Name not found");
     }
 }
 

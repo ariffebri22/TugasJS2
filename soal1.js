@@ -14,7 +14,7 @@ const arrayString = combinedArray.toString();
 //3. Find()
 //Untuk menemukan deretan array sesuai dengan kondisi
 let angka = [1, 4, 5, 10, 20, 6, 7, 8, 30, 9, 6, 5, 4];
-let angka2 = angka.find(function (e) {
+let angka2 = angka.find((e) => {
     return e >= 6;
 });
 // console.log(angka2);
@@ -48,7 +48,7 @@ const countryy = country.pop();
 
 //8. Object.create()
 //Untuk membuat sebuah object prototipe
-const methodMahasiswa = {
+const methodPlayer = {
     makan(porsi) {
         this.energi += porsi;
         console.log(`Halo ${this.nama} selamat makan!`);
@@ -63,15 +63,15 @@ const methodMahasiswa = {
     },
 };
 
-function Mahasiswa(nama, energi) {
-    let mahasiswa = Object.create(methodMahasiswa);
-    mahasiswa.nama = nama;
-    mahasiswa.energi = energi;
+function Player(nama, energi) {
+    let player = Object.create(methodPlayer);
+    player.nama = nama;
+    player.energi = energi;
 
-    return mahasiswa;
+    return player;
 }
 
-let arif = Mahasiswa("Arif", 10);
+let arif = Player("Arif", 10);
 
 //9. Object.keys()
 //Untuk membuat sebuah array baru berdasarkan value dari sebuah object

@@ -15,7 +15,7 @@ function SeleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
         return console.log("Jumlah angka dalam dataArray harus lebih dari 5");
     }
 
-    const results = dataArray.filter(function (data) {
+    const results = dataArray.filter((data) => {
         return data > nilaiAwal && data < nilaiAkhir;
     });
 
@@ -23,7 +23,7 @@ function SeleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
         return console.log("Nilai tidak ditemukan");
     }
 
-    results.sort(function (a, b) {
+    results.sort((a, b) => {
         return a - b;
     });
 
